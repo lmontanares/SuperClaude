@@ -28,10 +28,13 @@ Think of it as a brain upgrade for Claude Code. Drop it in once, and suddenly Cl
 ```bash
 git clone https://github.com/NomenAK/SuperClaude.git
 cd SuperClaude
-./install.sh
+./install.sh                           # Default: ~/.claude/
+# OR
+./install.sh --dir /opt/claude          # Custom location
+./install.sh --dir ./project-claude    # Project-specific
 ```
 
-That's it. No databases, no services, no dependencies. It quietly installs to `~/.claude/` and works in every project. The installer even backs up your existing config automatically!
+That's it. No databases, no services, no dependencies. Installs to `~/.claude/` by default or any directory you choose. The installer even backs up your existing config automatically!
 
 ## 💡 Why You'll Love It
 
@@ -212,6 +215,7 @@ Skip if you:
 1. **Install**
    ```bash
    git clone https://github.com/NomenAK/SuperClaude.git && cd SuperClaude && ./install.sh
+   # Or custom location: ./install.sh --dir /your/path
    ```
 
 2. **Test Drive**
@@ -227,7 +231,7 @@ Skip if you:
 
 ## 🛟 Need Help?
 
-- **Installation issues?** Run `./install.sh` again – it's idempotent
+- **Installation issues?** Run `./install.sh` again – it's idempotent. Use `./install.sh --help` for options
 - **Commands not working?** Check `ls ~/.claude/commands/`
 - **Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md)
 - **Found a bug?** [Open an issue](https://github.com/NomenAK/SuperClaude/issues)
